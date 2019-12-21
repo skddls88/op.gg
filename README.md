@@ -1,2 +1,0 @@
-# op.gg
- lol project
