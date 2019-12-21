@@ -1,0 +1,773 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+small, div, p, span, button {
+  font-family: Helvetica, "Malgun Gothic", "Apple SD Gothic Neo", AppleGothic, Dotum, Arial, Tahoma;
+}
+
+div {
+  display: block;
+}
+
+.GameItemList {
+  margin-top: 8px;
+}
+
+.GameItemList>.GameItemWrap {
+  position: relative;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+
+.GameItem {
+  position: relative;
+  background: none;
+}
+
+.GameItem.Win>.Content {
+  table-layout: fixed;
+  background-color: #a3cfec;
+  border-color: #99b9cf;
+}
+
+.GameItem.Lose>.Content {
+  table-layout: fixed;
+  background-color: #e2b6b3;
+  border-color: #cea7a7;
+}
+
+.GameItem>.Content {
+  display: table;
+  width: 748px;
+  border-collapse: collapse;
+  border: 1px solid #cdd2d2;
+}
+
+/* GameStats */
+._timeCountAssigned {
+  font-size: inherit;
+  cursor: help;
+}
+
+.GameItem>.Content>.GameStats {
+  width: 70px;
+  text-align: center;
+  font-size: 11px;
+  color: #555;
+  line-height: 16px;
+}
+
+.GameItem>.Content>div {
+  display: table-cell;
+  height: 96px;
+  vertical-align: middle;
+}
+
+.GameItem>.Content>.GameStats>.GameType {
+  font-weight: bold;
+  width: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.GameItem.Lose>.Content>.GameStats>.Bar {
+  background: #cea7a7;
+}
+
+.GameItem>.Content>.GameStats>.Bar {
+  display: block;
+  width: 27px;
+  margin: 5px auto;
+  height: 2px;
+}
+
+.GameItem.Win>.Content>.GameStats>.GameResult {
+  color: #1a78ae;
+}
+
+.GameItem.Lose>.Content>.GameStats>.GameResult {
+  color: #c6443e;
+}
+
+.GameItem>.Content>.GameStats>.GameResult {
+  font-weight: bold;
+}
+
+/* GameStats */
+/* GameSettingInfo */
+.GameItem>.Content>.GameSettingInfo {
+  width: 100px;
+  font-size: 0;
+}
+
+.GameItem>.Content>.GameSettingInfo>.ChampionImage {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  vertical-align: middle;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.GameItem>.Content>.GameSettingInfo>.ChampionImage>a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.GameItem>.Content>.GameSettingInfo>.ChampionImage .Image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.GameItem>.Content>.GameSettingInfo>.SummonerSpell {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+.GameItem>.Content>.GameSettingInfo>.SummonerSpell>.Spell:first-child {
+  margin-left: 0;
+}
+
+.GameItem>.Content>.GameSettingInfo>.SummonerSpell>.Spell {
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.GameItem>.Content>.GameSettingInfo>.SummonerSpell>.Spell>.Image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.GameItem>.Content>.GameSettingInfo>.Runes {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+.GameItem>.Content>.GameSettingInfo>.Runes>.Rune:first-child {
+  margin-top: 0;
+}
+
+.GameItem>.Content>.GameSettingInfo>.Runes>.Rune {
+  width: 22px;
+  height: 22px;
+}
+
+.GameItem>.Content>.GameSettingInfo>.Runes>.Rune:first-child>.Image {
+  background: #000;
+}
+
+.GameItem>.Content>.GameSettingInfo>.Runes>.Rune>.Image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.GameItem>.Content>.GameSettingInfo>.Runes>.Rune {
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+}
+
+.GameItem>.Content>.GameSettingInfo>.ChampionName {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #555;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.GameItem>.Content>.GameSettingInfo>.ChampionName>a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* GameSettingInfo */
+/* KDA */
+.GameItem>.Content>.KDA {
+  font-size: 11px;
+  text-align: center;
+}
+
+.GameItem>.Content>.KDA>.KDA {
+  color: #879292;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.GameItem>.Content>.KDA>.KDA>.Kill, .GameItem>.Content>.KDA>.KDA>.Assist {
+  color: #555e5e;
+}
+
+.GameItem>.Content>.KDA>.KDA>.Kill, .GameItem>.Content>.KDA>.KDA>.Death, .GameItem>.Content>.KDA>.KDA>.Assist {
+  font-weight: bold;
+}
+
+.GameItem>.Content>.KDA>.KDA>.Death {
+  color: #c6443e;
+}
+
+.GameItem>.Content>.KDA>.KDA>.Assist {
+  color: #555e5e;
+}
+
+.GameItem>.Content>.KDA>.KDARatio {
+  color: #555e5e;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+.GameItem>.Content>.KDA>.KDARatio .KDARatio {
+  color: #353a3a;
+}
+
+.GameItem>.Content>.KDA>.Badge {
+  display: inline-block;
+  color: #fff;
+  margin: 8px auto 0;
+  font-size: 10px;
+}
+
+.GameItem>.Content>.KDA>.Badge>.ACE {
+  border-radius: 9px;
+  background-color: #8c51c5;
+  border: solid 1px #7f3590;
+}
+
+.GameItem>.Content>.KDA>.MultiKill {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 10px;
+  color: #f2f2f2;
+}
+
+.GameItem>.Content>.KDA>.MultiKill>.Kill {
+  display: inline-block;
+  background: #ee5a52;
+  border: 1px solid #c6443e;
+  border-radius: 15px;
+  padding: 2px 5px;
+  line-height: 1;
+}
+
+.GameItem>.Content>.KDA>.Badge>.MVP {
+  border-radius: 9px;
+  background-color: #e19205;
+  border: solid 1px #b88a2a;
+}
+
+/* KDA */
+/* Stats */
+.GameItem>.Content>.Stats {
+  width: 90px;
+  font-size: 11px;
+  text-align: center;
+  line-height: 18px;
+  color: #555e5e;
+}
+
+.GameItem>.Content>.Stats>.CKRate {
+  color: #c6443e;
+}
+
+/* Stats */
+/* Items */
+.GameItem>.Content>.Items {
+  font-size: 0;
+}
+
+.GameItem>.Content>div {
+  display: table-cell;
+  height: 96px;
+  vertical-align: middle;
+}
+
+.GameItem>.Content>.Items .ItemList {
+  width: 96px;
+  margin: 0 auto;
+}
+
+.GameItem.Win>.Content>.Items>.ItemList>.Item {
+  background-color: #99b9cf;
+}
+
+.GameItem.Lose>.Content>.Items>.ItemList>.Item {
+  background-color: #cea7a7;
+}
+
+.GameItem>.Content>.Items .Item {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  margin-top: 2px;
+  margin-right: 2px;
+  overflow: hidden;
+}
+
+.GameItem>.Content>.Items .Item>.Image {
+  width: 100%;
+  height: 100%;
+}
+
+.GameItem>.Content>.Items .Button {
+  margin-top: 2px;
+  border: none;
+  padding: 0;
+  background: none;
+  width: 22px;
+  height: 22px;
+}
+
+.Button {
+  text-align: center;
+}
+
+.GameItem>.Content>.Items .Button .On {
+  display: none;
+}
+
+.GameItem>.Content>.Items .Button img {
+  width: 100%;
+}
+
+.GameItem>.Content>.Items .Button .Off {
+  display: block;
+}
+
+.GameItem>.Content>.Items .Trinket {
+  margin-top: 7px;
+  color: #353a3a;
+  line-height: 13px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.GameItem>.Content>.Items .Trinket img {
+  vertical-align: middle;
+}
+
+/* Items */
+/* FollowPlayers Names */
+.GameItem>.Content>.FollowPlayers {
+  width: 170px;
+  font-size: 0;
+}
+
+.GameItem>.Content>.FollowPlayers.Names>.Team {
+  float: left;
+  width: 50%;
+}
+
+.GameItem>.Content>.FollowPlayers.Names>.Team>.Summoner>.ChampionImage {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+
+.GameItem>.Content>.FollowPlayers.Names>.Team>.Summoner>.ChampionImage>.Image20 {
+  display: none;
+}
+
+.GameItem>.Content>.FollowPlayers.Names>.Team>.Summoner>.SummonerName {
+  display: inline-block;
+  max-width: 60px;
+  vertical-align: middle;
+  font-size: 11px;
+  color: #555;
+}
+
+.__sprite {
+  display: inline-block;
+  text-indent: -99999px;
+}
+
+.__spc16 {
+  background-image: url(../images/champion16.png);
+}
+
+.__spc20 {
+  background-image: url(../images/champion20.png);
+}
+
+.__spc16-71 {
+  background-position: 0px -1136px;
+  width: 16px;
+  height: 16px;
+}
+
+.__spc20-71 {
+  background-position: 0px -1420px;
+  width: 20px;
+  height: 20px;
+}
+
+.GameItem>.Content>.FollowPlayers.Names>.Team>.Summoner>.SummonerName>.Link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.__spc16-137 {
+  background-position: 0px -2192px;
+  width: 16px;
+  height: 16px;
+}
+
+.GameItem>.Content>.FollowPlayers.Names>.Team>.Summoner>.ChampionImage>.Image20 {
+  display: none;
+}
+
+.__spc20-137 {
+  background-position: 0px -2740px;
+  width: 20px;
+  height: 20px;
+}
+
+.__spc16-40 {
+  background-position: 0px -640px;
+  width: 16px;
+  height: 16px;
+}
+
+.__spc20-40 {
+  background-position: 0px -800px;
+  width: 20px;
+  height: 20px;
+}
+
+.__spc16-8 {
+  background-position: 0px -128px;
+  width: 16px;
+  height: 16px;
+}
+
+.__spc20-8 {
+  background-position: 0px -160px;
+  width: 20px;
+  height: 20px;
+}
+
+.__spc16-110 {
+  background-position: 0px -1760px;
+  width: 16px;
+  height: 16px;
+}
+
+.__spc20-110 {
+  background-position: 0px -2200px;
+  width: 20px;
+  height: 20px;
+}
+
+.GameItem>.Content>.FollowPlayers.Names>.Team {
+  float: left;
+  width: 50%;
+}
+
+.GameItem>.Content>.FollowPlayers.Names>.Team>.Summoner {
+  display: block;
+  width: 80px;
+  height: 18px;
+  margin-left: 3px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.__spc16-90 {
+  background-position: 0px -1440px;
+  width: 16px;
+  height: 16px;
+}
+
+.__spc20-90 {
+  background-position: 0px -1800px;
+  width: 20px;
+  height: 20px;
+}
+
+.__spc16-99 {
+  background-position: 0px -1584px;
+  width: 16px;
+  height: 16px;
+}
+
+.__spc20-99 {
+  background-position: 0px -1980px;
+  width: 20px;
+  height: 20px;
+}
+
+.__spc16-131 {
+  background-position: 0px -2096px;
+  width: 16px;
+  height: 16px;
+}
+
+.__spc20-131 {
+  background-position: 0px -2620px;
+  width: 20px;
+  height: 20px;
+}
+
+.GameItem>.Content>.FollowPlayers.Names>.Team>.Summoner.Requester>.ChampionImage {
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.__spc16-100 {
+  background-position: 0px -1600px;
+  width: 16px;
+  height: 16px;
+}
+
+.__spc20-100 {
+  background-position: 0px -2000px;
+  width: 20px;
+  height: 20px;
+}
+
+.GameItem>.Content>.FollowPlayers.Names>.Team>.Summoner.Requester>.SummonerName>.Link {
+  color: #222;
+}
+
+.__spc16-98 {
+  background-position: 0px -1568px;
+  width: 16px;
+  height: 16px;
+}
+
+.__spc20-98 {
+  background-position: 0px -1960px;
+  width: 20px;
+  height: 20px;
+}
+
+.__spc16-88 {
+  background-position: 0px -1408px;
+  width: 16px;
+  height: 16px;
+}
+
+.__spc20-88 {
+  background-position: 0px -1760px;
+  width: 20px;
+  height: 20px;
+}
+
+.__spc16-2 {
+  background-position: 0px -32px;
+  width: 16px;
+  height: 16px;
+}
+
+.__spc20-2 {
+  background-position: 0px -40px;
+  width: 20px;
+  height: 20px;
+}
+
+.__spc16-83 {
+  background-position: 0px -1328px;
+  width: 16px;
+  height: 16px;
+}
+
+.__spc20-83 {
+  background-position: 0px -1660px;
+  width: 20px;
+  height: 20px;
+}
+
+.__spc16-15 {
+  background-position: 0px -240px;
+  width: 16px;
+  height: 16px;
+}
+
+.__spc20-15 {
+  background-position: 0px -300px;
+  width: 20px;
+  height: 20px;
+}
+
+.__spc16-136 {
+  background-position: 0px -2176px;
+  width: 16px;
+  height: 16px;
+}
+
+.__spc20-136 {
+  background-position: 0px -2720px;
+  width: 20px;
+  height: 20px;
+}
+
+/* FollowPlayers Names */
+/* StatsButton */
+.GameItem.Lose>.Content>.StatsButton {
+  border-color: #d67b77;
+  background: #e89d99;
+}
+
+.GameItem.Win>.Content>.StatsButton {
+  border-color: #4aa1d2;
+  background: #64b1e4;
+}
+
+.GameItem>.Content>.StatsButton {
+  width: 30px;
+  border: 1px solid #000;
+}
+
+.GameItem>.Content>.StatsButton .Content {
+  position: relative;
+  width: 30px;
+  height: 96px;
+}
+
+.GameItem>.Content>.StatsButton .Content .Item {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 30px;
+  height: 100%;
+}
+
+.GameItem>.Content>.StatsButton .Content .Item .Button.MatchDetail {
+  height: 100%;
+}
+
+.GameItem>.Content>.StatsButton .Content .Item .Button {
+  display: block;
+  width: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+a.Button {
+  text-decoration: none;
+  outline: none;
+}
+
+.GameItem>.Content>.StatsButton .Content .Item .Button.MatchDetail span {
+  position: absolute;
+  bottom: 10px;
+  left: 9px;
+}
+
+.GameItem>.Content>.StatsButton .Content .Off {
+  display: block;
+}
+
+.__spSite-198 {
+  background-position: -127px -3880px;
+  width: 13px;
+  height: 10px;
+}
+
+.__spSite {
+  background-image: url(../images/site.png);
+}
+
+.GameItem>.Content>.StatsButton .Content .On {
+  display: none;
+}
+
+.__spSite-197 {
+  background-position: -127px -3870px;
+  width: 13px;
+  height: 10px;
+}
+
+.__spSite-194 {
+  background-position: -127px -3840px;
+  width: 13px;
+  height: 10px;
+}
+
+.__spSite-193 {
+  background-position: -127px -3830px;
+  width: 13px;
+  height: 10px;
+}
+
+.__spc16-20 {
+  background-position: 0px -320px;
+  width: 16px;
+  height: 16px;
+}
+
+.__spc20-20 {
+  background-position: 0px -400px;
+  width: 20px;
+  height: 20px;
+}
+
+.__spc16-130 {
+  background-position: 0px -2080px;
+  width: 16px;
+  height: 16px;
+}
+
+.__spc20-130 {
+  background-position: 0px -2600px;
+  width: 20px;
+  height: 20px;
+}
+
+/* StatsButton */
+/* GameDetail */
+.GameItem>.GameDetail {
+  background: #ededed;
+}
+
+/* GameDetail */
+
+/* GameMoreButton Box */
+.Box {
+  border: 1px solid #cdd2d2;
+  box-shadow: 0 1px #dcdfdf;
+  background: #f2f2f2;
+  border-radius: 2px;
+}
+
+.GameMoreButton>.Button {
+  display: block;
+  height: 50px;
+  color: #555e5e;
+  font-size: 13px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+/* GameMoreButton Box */
