@@ -1,7 +1,10 @@
 import requests
 import json
 
-api_key = 'RGAPI-2d852cb0-f46b-4ce0-9284-01ddf8ccbd95'
+api_key = 'RGAPI-2d852cb0-f46b-4ce0-9284-01ddf8ccbd95' #마스터 api_key
+
+#테스트 추가요
+
 
 def summoner_data(nick_name): # 소환사명으로 userid, uuid , 데이타등 전체적으로 가져옴
 
