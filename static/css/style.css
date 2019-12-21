@@ -1,0 +1,157 @@
+
+/* nav */
+.nav-bg{
+    background: #232f46 !important;
+    border-radius: 0;
+}
+
+.logo-color{
+  color: #fff !important;
+}
+
+.login{
+    margin-top: 8px;
+}
+
+.lol{
+  color:#fff !important;
+}
+
+.nav-bg2{
+  background: #5383e8 !important;
+}
+
+.menu li a{
+  color: #fff;
+}
+
+.Search{
+  margin-top: 8px;
+}
+
+/* nav end */
+
+
+/* summoner */
+
+
+.PastRankList{
+  display: flex;
+}
+.PastRankList li{
+  list-style: none;
+  border: 1px solid #ced3d3;
+  margin-right: 3px;
+  background: #e0e3e3;
+  padding:3px 4px 2px 4px;
+  font-size: 11px;
+  color:#657070;
+}
+
+
+.ProfileIcon{
+  width: 120px;
+  height: 120px;
+  background: url('../images/gold.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left:20px;
+  position: absolute;
+}
+
+.ProfileImage{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  z-index: -1;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.Name{
+  color: #242929;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 4px;
+}
+.FavoriteButton{
+  background: none;
+  border: 1px solid #ced3d3;
+  border-radius: 5px;
+}
+
+.SemiRound{
+  border: 1px solid #1a78ae;
+    background: #1f8ecd;
+    color: #f2f2f2;
+    padding: 11px 14px 10px;
+    text-align: center;
+    width: 130px;
+    margin-top: 43px;
+    margin-bottom: 43px;
+}
+
+/* summoner end */
+
+
+
+/* tabHeaders */
+
+.MenuList{
+  border-bottom: 1px solid #c6cbcb;
+  margin-top: 25px;
+}
+
+.tab>li{
+  border-left: 1px solid #c6cbcb;
+  border-top: 1px solid #c6cbcb;
+  border-right: 1px solid #c6cbcb;
+  width: 100px;
+  text-align: center;
+}
+.tab>li:first-child{
+  border-right:none;
+  background: #e8eaea;
+}
+.tab>li>a{
+ color: #141717;
+}
+.tabHeaders{
+  margin-bottom: 30px;
+}
+.Images{
+  width: 100%;
+}
+
+.SummonerRatingMedium{
+  border: 1px solid #c6cbcb;
+  padding: 20px 20px;
+}
+.sub-tier{
+  margin-top: 30px;
+  border: 1px solid #c6cbcb;
+  padding: 20px 20px;
+}
+
+.tabHeaders{
+  margin-top: 30px;
+}
+
+.nav-tabs li{
+  width: 25% !important;
+}
+.tab-content>div{
+  width: 25% !important;
+}
+
+
+.ChampionBox{
+  width: 100%;
+  display: flex;
+}
+
+
+
+
+
+/* tabHeaders end */
